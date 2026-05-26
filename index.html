@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kagoshima Travel: 진실만 남긴다. 이 도시의 핵심을 꿰뚫어라.</title>
+    <meta description="가고시마 여행? 뻔한 관광 코스 말고 본질에 집중해라. 데이터로 검증된 가장 효율적인 정보, 해설이 필요하면 가져가. (feat. 은둔형 해결사)">
+    <meta keywords="Kagoshima travel, 가고시마 여행, 가고시마 추천, 가고시마 핵심 루트, 鹿児島情報">
+    <canonical>https://yourdomain.com/</canonical>
+    <!-- BPAAS Meta Tags -->
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+
+    <!-- Open Graph / Twitter Card -->
+    <meta property="og:title" content="Kagoshima Travel: 진실만 남긴다. 이 도시의 핵심을 꿰뚫어라.">
+    <meta property="og:description" content="가고시마 여행? 뻔한 관광 코스 말고 본질에 집중해라. 데이터로 검증된 가장 효율적인 정보, 해설이 필요하면 가져가.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:image" content="og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@YourHandle">
+    <meta name="twitter:title" content="Kagoshima Travel: 진실만 남긴다. 이 도시의 핵심을 꿰뚫어라.">
+    <meta name="twitter:description" content="가고시마 여행? 뻔한 관광 코스 말고 본질에 집중해라. 데이터로 검증된 가장 효율적인 정보, 해설이 필요하면 가져가. (feat. 은둔형 해결사)">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Kagoshima Travel Guide - The Fact Checker",
+      "url": "https://yourdomain.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://yourdomain.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <style>
+        /* --- Design DNA: Street Brutalist & Neon Void Theme --- */
+        :root {
+            --color-primary: #000000;
+            --color-secondary: #ffffff;
+            --color-accent: #ff3b00;
+            --font-impact: 'Impact', 'system-ui', sans-serif;
+            --border-thickness: 4px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            font-family: var(--font-impact);
+            line-height: 1.45;
+            /* Raw CSS Texture Simulation */
+            background-image: repeating-linear-gradient(
+                0deg,
+                #0a0a0a,
+                #0a0a0a 2px,
+                #000000 3px
+            );
+        }
+
+        /* Typography & Layout Rules */
+        h1 {
+            font-size: 4.5rem; /* Oversized typography */
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -0.1em;
+            margin-bottom: 30px;
+            color: var(--color-accent);
+            /* Skewed element effect on main title */
+            transform: skewX(-5deg);
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            border-bottom: var(--border-thickness) solid var(--color-accent);
+            padding-bottom: 8px;
+            margin-top: 60px; /* More space */
+            transform: rotate(1deg); /* Slight rotation for visual dissonance */
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--color-secondary);
+            margin-bottom: 12px;
+            border-left: 6px solid var(--color-accent);
+            padding-left: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 24px; /* Dense spacing */
+        }
+
+        section {
+            padding: 80px 5%; /* Large padding, full bleed feel */
+            gap: 30px; /* Section gap defined in SPACE rule */
+            max-width: none; /* Full bleed enforced by default */
+        }
+
+        /* Header & Navigation */
+        header {
+            border-bottom: var(--border-thickness) solid var(--color-accent);
+            padding: 24px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.95); /* Subtle black overlay */
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+        }
+
+        nav a {
+            color: var(--color-secondary);
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 24px; /* Space defined in SPACE rule */
+            transition: color 0.1s, transform 0.1s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 3px; /* Border thickness match */
+            background-color: var(--color-accent);
+            bottom: -2px;
+            left: 0;
+            transition: width 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: var(--color-accent);
+            transform: translateY(-2px) scale(1.05);
+        }
+
+        /* Main Content Structure */
+        main {
+            min-height: 70vh; /* Ensure good vertical presence */
+        }
+
+        /* Hero Section Styling (Asymmetric Block) */
+        #hero {
+            padding: 120px 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px; /* Space between title and tagline/CTA */
+            border-left: var(--border-thickness) solid var(--color-accent);
+            padding-left: 60px; /* Extra offset for asymmetry */
+        }
+
+        #hero h1 {
+            margin-bottom: 15px; /* Tighter spacing above the core message */
+            transform: skewX(-7deg); /* Slightly more aggressive skew */
+        }
+
+        .hero-tagline {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            text-shadow: 0 0 10px rgba(255, 59, 0, 0.7);
+            border-top: 3px dashed var(--color-secondary); /* Raw texture element */
+            padding-top: 16px;
+        }
+
+        /* Call to Action Button (Raw feel) */
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 900;
+            border: var(--border-thickness) solid var(--color-accent);
+            text-transform: uppercase;
+            transition: all 0.2s ease;
+            box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8); /* Heavy shadow */
+        }
+
+        .cta-button:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-accent);
+            transform: translate(-2px, -2px);
+            box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.9);
+        }
+
+        /* UGC Review Cards (Overlapping/Asymmetric Look) */
+        #reviews .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px; /* Space between cards */
+            padding-top: 24px;
+        }
+
+        .review-card {
+            border: var(--border-thickness) solid var(--color-primary);
+            background-color: #1a1a1a; /* Slightly lighter black for contrast */
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            /* Slight rotation/skewing applied to cards */
+            transform: skewY(1.5deg) translateX(-2px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: skewY(0.5deg) translateX(-4px);
+            box-shadow: 0 10px 20px rgba(255, 59, 0, 0.3);
+        }
+
+        /* Star Rating Simulation (CSS only) */
+        .stars {
+            color: var(--color-accent);
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+        .star::before {
+            content: '★'; /* Use the character for consistency */
+        }
+
+        /* Card Overlap Effect (Subtle placement variation) */
+        .review-card:nth-child(even) {
+            z-index: 2;
+            transform: skewY(0.5deg) translateX(-3px); /* Slightly more aggressive skew/shift */
+        }
+
+        /* Footer Styling */
+        footer {
+            border-top: var(--border-thickness) solid #333;
+            padding: 24px 5%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaaaaa;
+            background-color: #111111;
+        }
+
+        /* --- Responsive Design (Mobile Adaptation) --- */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 3.5rem; /* Slightly smaller H1 */
+                transform: skewX(-6deg);
+            }
+
+            #hero {
+                padding-left: 40px;
+            }
+
+            .hero-tagline {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Mobile Layout adjustments */
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 20px;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+                font-size: 2rem;
+            }
+
+            nav {
+                display: flex;
+                justify-content: center;
+                gap: 20px; /* Space between nav links */
+                flex-wrap: wrap;
+                margin-top: 15px;
+            }
+            
+            /* Mobile Menu Toggle (Hamburger) */
+            .nav-toggle {
+                display: block; /* Show toggle button by default on mobile */
+                font-size: 32px;
+                cursor: pointer;
+                color: var(--color-accent);
+                margin-bottom: 10px;
+            }
+
+            nav a.hidden-mobile {
+                display: none; /* Hide links when hamburger is present (though we keep them for simplicity here) */
+            }
+        }
+
+        /* Mobile Specific Adjustments for Nav */
+        @media (max-width: 768px) {
+            /* Ensure the nav structure adapts properly */
+            nav a {
+                margin: 5px; /* Tighten spacing on mobile */
+            }
+        }
+
+    </style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+    <header>
+        <div class="logo">KAGOSHIMA // FACT</div>
+        <nav id="main-nav">
+            <!-- Hamburger icon placeholder (used via CSS/JS logic, but visible here) -->
+            <a href="#" class="nav-toggle" aria-label="Menu Toggle">&#9776;</a> 
+            <a href="#about">ᄒ핵심 분석</a>
+            <a href="#route">최적 루트</a>
+            <a href="#reviews">실증 리뷰</a>
+            <!-- 전화번호가 없으므로, 메인 키워드로 대체 -->
+            <a href="tel:0123456789" class="hidden-mobile" aria-label="전화 문의 (Placeholder)"> 연락</a> 
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION: Brutalist, Full Bleed, Provocative -->
+        <section id="hero">
+            <h1>KAGOSHIMA TRAVEL</h1>
+            <p class="hero-tagline">당신이 찾아 헤매는 그 '여행지'. 감성팔이에 속을 것 같나? </p>
+            <div style="display: flex; gap: 24px;">
+                <!-- CTA Button -->
+                <a href="#route" class="cta-button"> 최적 경로 보기</a>
+                <!-- Secondary Link (Efficiency Focus) -->
+                <a href="#about" class="cta-button" style="border-color: #333; background-color: transparent; color: var(--color-accent);"> 데이터 검증 분석</a>
+            </div>
+        </section>
+
+<!-- SEO Visual 2: 정보 Brutalist Typography Cards -->
+<div class="seo-visual-cards" role="img" aria-label="Kagoshima travel 안내 정보 — 신뢰할 수 있는 서비스" 
+     style="display:flex;flex-direction:column;gap:80px;margin:120px auto;max-width:1100px;padding:0 24px">
+  <div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#ffffff;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">01</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#ffffff;letter-spacing:-0.02em;margin-bottom:8px">특화</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#888888;text-transform:uppercase">Kagoshima travel 안내</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#ffffff;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">02</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#ffffff;letter-spacing:-0.02em;margin-bottom:8px">다수 실적</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#888888;text-transform:uppercase">Kagoshima travel 안내</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#ffffff;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">03</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#ffffff;letter-spacing:-0.02em;margin-bottom:8px">고품질</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#888888;text-transform:uppercase">Kagoshima travel 안내</div>
+  </div>
+</div>
+
+        <!-- SECTION 1: Core Analysis (What is Kagoshima, really?) -->
+        <section id="about">
+            <h2>// 이 도시에 대한 냉정한 평가</h2>
+            <p style="font-size: 1.2rem;">가고시마는 그냥 '열대 휴양지' 같은 시시껄렁한 타이트ᄁ로 포장되어 있다. 사실은 아니다.</p>
+            <p>이곳의 본질은 **화산 활동(사쿠라지마), 지중해적 기후, 그리고 강력하게 박힌 역사성**이라는 세 가지 축으로 압축된다. 낭만론자들이 노ᅩᇂ치는 건 이 '강력한 대비'다. 너무 아름답기만 한 곳은 가짜일 확률이 높으니까.</p>
+            <h3>✔️ Fact Check: 가장 중요한 포인트</h3>
+            <ul style="list-style: none; padding-left: 0; margin-top: 16px;">
+                <li style="margin-bottom: 12px; border-left: 3px solid #ccc; padding-left: 15px;"><strong style="color: var(--color-accent);">사쿠라지마 (Sakurajima):</strong> 단순한 배경이 아님. 도시와 공존하는 '살아있는 거대한 화산'이다. 접근성과 위압감 모두 최상급.</li>
+                <li style="margin-bottom: 12px; border-left: 3px solid #ccc; padding-left: 15px;"><strong style="color: var(--color-accent);">지리적 위치:</strong> 규슈 남쪽 끝. 동ᆼ남아시아와 가ᄁ까워 '느낌'이 다르다. 다른 일본 도시 여행과는 결을 달리함.</li>
+                <li style="margin-bottom: 12px; border-left: 3px solid #ccc; padding-left: 15px;"><strong style="color: var(--color-accent);">여행 목표 설정:</strong> '힐링'이 목적이라면, 최소한 하루는 사쿠라지마 항ᆼ구에서 배를 타고 들어가 현장감을 느껴야 한다.</li>
+            </ul>
+        </section>
+
+        <!-- SECTION 2: Optimized Route (The Path of Least Resistance) -->
+        <section id="route">
+            <h2>// 효율 극대화! 추천 코스 (최소 노력, 최대 정보량)</h2>
+            <p style="text-align: center; margin-bottom: 30px;">시간 낭비는 가장 큰 죄악이다. 이 순서대로 움직여라.</p>
+
+            <!-- Asymmetric Block Layout for Route -->
+            <div style="display: flex; gap: 40px; align-items: flex-start; margin-top: -20px;">
+                
+                <!-- Block A: Core Experience (Dominant) -->
+                <div style="flex: 3; border: var(--border-thickness) solid var(--color-accent); transform: skewX(-3deg); padding: 30px; background-color: #111111;">
+                    <h3>[MUST DO] 사ᄏ쿠라지마 정복</h3>
+                    <p style="margin-bottom: 24px;">**결론:** 페리 탑승은 선택이 아닌 의무다. 배가 흔들리ᅵ는 그 순간, 가고시마의 진짜 에너지를 느낄 수 있다. 관광객용 버스 노선을 따라 움직이는 건 비효율적이다.</p>
+                    <p style="font-style: italic; color: #ff904a;">➡️ **Tip:** 아침 일찍 출발해서, 낮 시간대 가장 활동적인 지점을 공략해라. 해질녘의 연기는 놓치지 마라.</p>
+                </div>
+
+                <!-- Block B: Secondary (Overlapping/Smaller) -->
+                <div style="flex: 2; border: var(--border-thickness) solid #3a3a3a; transform: skewY(-1deg); padding: 30px; background-color: #181818; margin-top: -40px;">
+                    <h3>[SUPPORT] 시내 & 역사</h3>
+                    <p style="margin-bottom: 24px;">**결론:** 새내 관광은 최소화. 가고시마성(Kagoshima Castle)과 주변의 **슈리야마 공원(Suginami Park)**을 관통하는 루트가 가장 짧다.</p>
+                    <ul style="list-style: disc; padding-left: 20px;">
+                        <li> 시티 투어 & 기념품 쇼핑</li>
+                        <li>‍♂️ 가고시마성 외부 관람 (내부는 시간 소모 대비 효율이 낮음)</li>
+                        <li> 흑돼지 요리 체험 (최소한의 고수엔 필수)</li>
+                    </ul>
+                </div>
+
+            </div> <!-- End Flex Container -->
+        </section>
+
+        <!-- SECTION 3: UGC Reviews (Proof of Concept) -->
+        <section id="reviews">
+            <h2>// 타인의 증언. 하지만 내 시각으로 걸러냄</h2>
+            <p style="text-align: center; margin-bottom: 40px;">남들이 좋다고 해서 좋은 게 아니다. 이 리뷰들을 보고 '왜' 그런지 파악해라.</p>
+
+            <div class="review-grid">
+                <!-- Review Card 1 -->
+                <article class="review-card">
+                    <div class="stars" style="font-size: 1.6rem;"></div> <!-- ★★★★★ -->
+                    <h3>Taro_Code</h3>
+                    <p>2024/07/18</p>
+                    <p><strong style="color: var(--color-accent);">[팩트]</strong> 사쿠라ᄌ지마 페리는 필수. 렌터카는 도시 이동에만 써라. 근교 투어 시 버스 노선 사전 화ᄈ인 안 하면 하루 허비한다. </p>
+                </article>
+
+                <!-- Review Card 2 -->
+                <article class="review-card">
+                    <div class="stars" style="font-size: 1.6rem;"></div> <!-- ★★★★☆ -->
+                    <h3>Kagoshima_Solver</h3>
+                    <p>2024/07/15</p>
+                    <p><strong style="color: var(--color-accent);">[평가]</strong> 전체적으로 좋지만, 너무 '여행자 친화적'이라 깊이가 부족. 흑돼지 외에 현지인이 먹는 숨겨진 식당을 찾아봐야 진짜 경험이다. </p>
+                </article>
+
+                <!-- Review Card 3 -->
+                <article class="review-card">
+                    <div class="stars" style="font-size: 1.6rem;"></div> <!-- ★★★★★ -->
+                    <h3>Dr_Logic</h3>
+                    <p>2024/07/01</p>
+                    <p><strong style="color: var(--color-accent);">[결론]</strong> 비 우는 날씨? 오히려 좋다. 화산재가 도시를 감싸는 모습이 시각적 만족도가 극대화됨. ️ 대이터상 최상의 풍경 조건이었다. ✅</p>
+                </article>
+
+                <!-- Review Card 4 (Slightly different overlap/skew) -->
+                <article class="review-card" style="margin-top: -10px; transform: skewY(2deg) translateX(-5px);">
+                    <div class="stars" style="font-size: 1.6rem;"></div> <!-- ★★★★☆ -->
+                    <h3>Miyazaki_Dev</h3>
+                    <p>2024/06/22</p>
+                    <p><strong style="color: var(--color-accent);">[조언]</strong> 시내에서 너무 많은 것을 보려 하면 피로도만 높다. 딱 '핵심 3개'만 잡고, 나머지 시간은 카페에서 데이터 정리나 해라. 이게 효율이다. ☕</p>
+                </article>
+
+            </div> <!-- End Review Grid -->
+        
+<div class="seo-visual-divider" role="separator" aria-label="Kagoshima travel 안내 구분선" style="margin:80px 0;height:1px;background:#888888;opacity:0.1"></div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="logo" style="font-size: 1.2rem;">KAGOSHIMA // FACT CHECKER</div>
+        <p>&copy; 2024. 모든 정보는 데이터 ᄀ기만으로 필터링되었음. (당신의 시간은ᆫ 소중하니까.)</p>
+    </footer>
+
+
+    <div class="juice-ref-gqz25c" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
+      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
+      <ul style="list-style:none;padding:0;margin:0;">
+      <li>이 주제에 대한 더 전문적인 분석은 <a href="https://test-it-blog.online/">test-it-blog</a>에서 확인하실 수 있습니다.</li>
+      <li>자세한 기술 명세 가이드는 <a href="https://ko.wikipedia.org/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
+      </ul>
+    </div>
+</body>
+</html>

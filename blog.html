@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kagoshima Travel: 진실만 남긴다. 이 도시의 핵심을 꿰뚫어라.</title>
+    <meta description="가고시마 여행? 뻔한 관광 코스 말고 본질에 집중해라. 데이터로 검증된 가장 효율적인 정보, 해설이 필요하면 가져가. (feat. 은둔형 해결사)">
+    <meta keywords="Kagoshima travel, 가고시마 여행, 가고시마 추천, 가고시마 핵심 루트, 鹿児島情報">
+    <link rel="canonical" href="[현재 페이지 URL]"> <!-- 실제 환경에서는 이 부분을 변경해야 함 -->
+
+    <!-- BPAAS Meta Tags -->
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+
+    <!-- Open Graph / Twitter Card -->
+    <meta property="og:title" content="Kagoshima Travel: 진실만 남긴다. 이 도시의 핵심을 꿰뚫어라.">
+    <meta property="og:description" content="가고시마 여행? 뻔한 관광 코스 말고 본질에 집중해라. 데이터로 검증된 가장 효율적인 정보, 해설이 필요하면 가져가. (feat. 은둔형 해결사)">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="[현재 페이지 URL]"> <!-- 실제 환경에서는 이 부분을 변경해야 함 -->
+    <!-- 이미지 태그는 CSS/HTML 구조에 따라 추가될 수 있지만, 요청사항에 맞춰 기본 골격만 유지합니다. -->
+
+    <style>
+        /* --- Design DNA: Street Brutalist & Neon Void Theme --- */
+        :root {
+            --color-primary: #FF073A; /* 강렬한 네온 레드/핑크 */
+            --color-secondary: #00FFFF; /* 사이버 블루 시안 */
+            --color-background: #0a0a14; /* 짙은 보라빛 검정 (Void) */
+            --color-text-main: #f0f0ff; /* 거의 흰색, 약간의 푸른 기운 */
+            --color-accent-border: #3a007a; /* 깊은 네온 보라 */
+            --font-primary: 'Impact', sans-serif; /* 브루탈리즘 느낌 강조 */
+            --font-secondary: 'Roboto Mono', monospace; /* 터미널/데이터 느낌 */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text-main);
+            font-family: 'Roboto', sans-serif; /* 기본 폰트 설정 */
+            line-height: 1.65;
+            padding: 20px; /* 전체 패딩 */
+        }
+
+        /* Typography & Layout Rules */
+        h1 {
+            font-family: var(--font-primary);
+            color: var(--color-secondary);
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 0.4em;
+            border-bottom: 5px solid var(--color-primary);
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-family: var(--font-secondary);
+            color: var(--color-primary);
+            font-size: 2em;
+            margin-top: 1.5em;
+            margin-bottom: 0.7em;
+            padding-left: 10px;
+            border-left: 4px solid var(--color-secondary);
+        }
+
+        h3 {
+            font-family: var(--font-primary);
+            color: #ffcc00; /* 골드/옐로우 강조 */
+            font-size: 1.3em;
+            margin-top: 1.2em;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-family: var(--font-secondary);
+            font-size: 1.1em;
+            color: rgba(240, 240, 255, 0.9);
+            margin-bottom: 1em;
+        }
+
+        section {
+            padding: 30px 0;
+            border-top: 3px dashed var(--color-accent-border);
+            margin-bottom: 25px;
+        }
+
+        /* Header & Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 3px solid var(--color-primary);
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-family: var(--font-primary);
+            font-size: 1.8em;
+            color: var(--color-secondary);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.7); /* 네온 효과 */
+        }
+
+        nav a {
+            color: var(--color-text-main);
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 1.05em;
+            padding: 5px 0;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: var(--color-primary);
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--color-secondary);
+            text-shadow: 0 0 8px rgba(255, 7, 58, 0.9);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* --- Responsive Utility Classes (Implicitly used by structure) --- */
+        /* .hamburger-menu (Icon/Toggle placeholder) - JS로 제어될 부분 */
+        .hamburger-menu {
+            display: none; /* 기본적으로는 네비가 보이는 상태 가정 */
+            cursor: pointer;
+            font-size: 1.8em;
+            color: var(--color-primary);
+        }
+
+        /* @media (max-width: 768px) { ... } */
+    </style>
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <a href="/" class="logo">KAGOSHIMA // DATA</a>
+        <nav>
+            <a href="/travel-guide">✈️ Travel Guide</a>
+            <a href="/city-spotlight"> Spots</a>
+            <a href="/itinerary">️ Itineraries</a>
+            <a href="/faq">❓ FAQ</a>
+            <!-- Tel Link 예시 -->
+            <a href="tel:+8190xxxxxxx" style="margin-left: 35px;"> Contact (Call)</a>
+        </nav>
+        <div class="hamburger-menu" id="burger">&#9776;</div> <!-- 삼선 아이콘 -->
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main style="max-width: 1100px; margin: 0 auto;">
+        
+        <!-- PAGE TITLE / HERO SECTION -->
+        <section id="hero" style="text-align: center; padding: 50px 0; border-top: none; border-bottom: 5px solid var(--color-accent-border);">
+            <h1>Kagoshima Travel Guide</h1>
+            <h2>[BRO's Take] 뻔한 관광은 시간 낭비. 데이터로 증명된 '필수 코스'만 찍어라.</h2>
+            <p style="font-size: 1.3em; max-width: 800px; margin: 20px auto;">"봐야 할 것 같다"는 감으로 움직이지 마라. 이 도시는 효율을 요구한다. 가고시마의 핵심 DNA를 파악하고, 가장 적은 노력으로 최대치의 경험치를 뽑아내는 방법. 지금부터 간다."</p>
+        </section>
+
+<!-- SEO Visual 2: 정보 Brutalist Typography Cards -->
+<div class="seo-visual-cards" role="img" aria-label="Kagoshima travel 안내 정보 — 신뢰할 수 있는 서비스" 
+     style="display:flex;flex-direction:column;gap:80px;margin:120px auto;max-width:1100px;padding:0 24px">
+  <div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">01</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">특화</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">Kagoshima travel 안내</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">02</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">다수 실적</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">Kagoshima travel 안내</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">03</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">고품질</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">Kagoshima travel 안내</div>
+  </div>
+</div>
+
+        <!-- ARTICLE BODY -->
+        <article>
+            
+            <!-- Section 1: Why Kagoshima? (The Core Thesis) -->
+            <section id="thesis">
+                <h2>// WHY KAGOSHIMA? - '열'을 가진 도시의 본질</h2>
+                <p>가고시마. 그냥 규슈 남쪽 끝에 있는 '예쁜 도시'라고 생각한다면, 이미 반은 졌다는 거다. 이 도시는 단순히 아름다운 풍경을 파는 게 아니야. 이곳은 **뜨거운 에너지**, 즉 활화산 사쿠라지마의 맥동하는 심장 박동 그 자체를 경험하게 해준다.</p>
+                <p>우리가 흔히 보는 코스는 '사쿠라지마 ➡️ 시내 관광 ➡️ 슈리성' 이지만, 이건 너무 순서가 정해진 레시피에 불과해. 우리는 이 재료들(데이터 포인트)을 가지고 가장 강렬한 맛을 네는 조합을 찾아낼 거다. 핵심은 **볼거리의 밀도**야.</p>
+            </section>
+
+            <!-- Section 2: The Essential Route (The MVP Plan) -->
+            <section id="route">
+                <h2>// THE ESSENTIAL ROUTE - 브로가 추천하는 최소 생존 루트</h2>
+                <h3> Day 1: 압축된 파워 & 현무암의 충격</h3>
+                <p>오전 일찍 도착해서 바로 사쿠라지마(Sakurajima)를 본다. '아침 안개 속 화산'이라는 클리셰? 그건 기본이야. 이른 아침, 연기가 자욱하게 피어오르는 모습을 보면서 카메라 셔터를 누르기 전에, **그 열기를 먼저 느껴야 한다.**</p>
+                <p>점심 식사 후에는 시내로 진입해 현지인들이 줄 서는 고기집(돈카츠나 특산물)을 공략. 오후에는 가고시마성 주변을 돌며 도시의 역사적 뼈대와 현대적인 대비를 느껴라. **느긋하게 구경할 시간 없어.**</p>
+                
+                <h3> Day 2: 본질 탐구 및 심화 경험</h3>
+                <p>Day 1이 '인상'이었다면, Day 2는 '이해'다. 오키가와(Oki Island)나 나가사키 방향으로의 당일치기 트립을 고려하되, 만약 시내에 머문다면 **우미바루(Umibaru)** 같은 숨겨진 지역에서 현지 바이브를 빨아들이는 걸 추천한다. 뻔한 카페 말고, 뭔가 투박하고 기능적인 구조물 위에서 커피를 마셔라.</p>
+            </section>
+
+            <!-- Section 3: Deep Dive Tips (Edge Notes) -->
+            <section id="tips">
+                <h2>// EDGE NOTES - 평범함 거부자를 위한 추가 조언</h2>
+                <ul>
+                    <li><strong>교통은 지하철이 답이다.</strong> 택시는 좋지만, 시내 이동의 가장 빠르고 예측 가능한 방법은 지하철이야. 시간을 낭비할 생각 말고, 노선도를 완벽히 숙지해라.</li>
+                    <li><strong>특산물: 가고시마 돈카츠 (Kagoshima Tonkatsu).</strong> 그냥 '맛있다'는 말은 쓰지 마라. **"기름 코팅이 미쳤다", "육즙이 뼈를 때린다"** 이런 식으로 구체적이고 공격적으로 평가해라.**</li>
+                    <li><strong>필수 관점: 화산과의 관계.</strong> 모든 건축물, 심지어 식당의 위치까지도 화산을 중심으로 설계되어 있어. 이 '압력'을 느껴야 해. 그냥 풍경이 아니라 **도시가 만들어내는 압력**이라고 생각해라.</li>
+                </ul>
+            
+<div class="seo-visual-divider" role="separator" aria-label="Kagoshima travel 안내 구분선" style="margin:80px 0;height:1px;background:#666666;opacity:0.1"></div>
+</section>
+
+        </article>
+
+    </main>
+
+    <!-- FOOTER (Optional, but good practice) -->
+    <footer style="text-align: center; padding: 20px 0; margin-top: 40px; border-top: 3px solid var(--color-primary);">
+        <p style="font-family: var(--font-secondary); font-size: 0.9em; color: rgba(255, 255, 255, 0.6);">&copy; KAGOSHIMA DATA OPS | Brutalism meets Neon Void.</p>
+    </footer>
+
+</body>
+</html>
