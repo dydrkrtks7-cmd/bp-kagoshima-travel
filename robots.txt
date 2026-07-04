@@ -7,10 +7,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-User-agent: Yeti
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-Sitemap: https://kagoshima-travel.pages.dev/sitemap.xml
+Sitemap: https://dydrkrtks7-cmd.github.io/bp-kagoshima-travel/sitemap.xml
