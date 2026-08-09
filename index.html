@@ -1,367 +1,363 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kagoshima Travel: 진실만 남긴다. 이 도시의 핵심을 꿰뚫어라.</title>
-    <meta description="가고시마 여행? 뻔한 관광 코스 말고 본질에 집중해라. 데이터로 검증된 가장 효율적인 정보, 해설이 필요하면 가져가. (feat. 은둔형 해결사)">
-    <meta keywords="Kagoshima travel, 가고시마 여행, 가고시마 추천, 가고시마 핵심 루트, 鹿児島情報">
-    <canonical>https://yourdomain.com/</canonical>
-    <!-- BPAAS Meta Tags -->
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-neon-void">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Kagoshima Travel: 진실만 남긴다. 이 도시의 핵심을 꿰뚫어라.</title>
+ <meta description="가고시마 여행? 뻔한 관광 코스 말고 본질에 집중해라. 데이터로 검증된 가장 효율적인 정보, 해설이 필요하면 가져가. (feat. 은둔형 해결사)">
+ <meta keywords="Kagoshima travel, 가고시마 여행, 가고시마 추천, 가고시마 핵심 루트, 鹿児島情報">
+ <canonical>https://yourdomain.com/</canonical>
+ <!-- Open Graph / Twitter Card -->
+ <meta property="og:title" content="Kagoshima Travel: 진실만 남긴다. 이 도시의 핵심을 꿰뚫어라.">
+ <meta property="og:description" content="가고시마 여행? 뻔한 관광 코스 말고 본질에 집중해라. 데이터로 검증된 가장 효율적인 정보, 해설이 필요하면 가져가.">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://kagoshima-travel-guide.pbn-builder.xyz/">
+ <meta property="og:image" content="og-image.svg">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:site" content="@YourHandle">
+ <meta name="twitter:title" content="Kagoshima Travel: 진실만 남긴다. 이 도시의 핵심을 꿰뚫어라.">
+ <meta name="twitter:description" content="가고시마 여행? 뻔한 관광 코스 말고 본질에 집중해라. 데이터로 검증된 가장 효율적인 정보, 해설이 필요하면 가져가. (feat. 은둔형 해결사)">
 
-    <!-- Open Graph / Twitter Card -->
-    <meta property="og:title" content="Kagoshima Travel: 진실만 남긴다. 이 도시의 핵심을 꿰뚫어라.">
-    <meta property="og:description" content="가고시마 여행? 뻔한 관광 코스 말고 본질에 집중해라. 데이터로 검증된 가장 효율적인 정보, 해설이 필요하면 가져가.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kagoshima-travel-guide.pbn-builder.xyz/">
-    <meta property="og:image" content="og-image.svg">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@YourHandle">
-    <meta name="twitter:title" content="Kagoshima Travel: 진실만 남긴다. 이 도시의 핵심을 꿰뚫어라.">
-    <meta name="twitter:description" content="가고시마 여행? 뻔한 관광 코스 말고 본질에 집중해라. 데이터로 검증된 가장 효율적인 정보, 해설이 필요하면 가져가. (feat. 은둔형 해결사)">
-
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Kagoshima Travel Guide - The Fact Checker",
-  "url": "https://kagoshima-travel-guide.pbn-builder.xyz/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://yourdomain.com/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+ <!-- JSON-LD Schema -->
+ <script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Kagoshima Travel Guide - The Fact Checker",
+ "url": "https://kagoshima-travel-guide.pbn-builder.xyz/",
+ "potentialAction": {
+ "@type": "SearchAction",
+ "target": "https://yourdomain.com/?s={search_term_string}",
+ "query-input": "required name=search_term_string"
+ }
 }</script>
 
-    <style>
-        /* --- Design DNA: Street Brutalist & Neon Void Theme --- */
-        :root {
-            --color-primary: #000000;
-            --color-secondary: #ffffff;
-            --color-accent: #ff3b00;
-            --font-impact: 'Impact', 'system-ui', sans-serif;
-            --border-thickness: 4px;
-        }
+ <style>
+ /* --- Design DNA: Street Brutalist & Neon Void Theme --- */
+ :root {
+ --color-primary: #000000;
+ --color-secondary: #ffffff;
+ --color-accent: #ff3b00;
+ --font-impact: 'Impact', 'system-ui', sans-serif;
+ --border-thickness: 4px;
+ }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
 
-        body {
-            background-color: var(--color-primary);
-            color: var(--color-secondary);
-            font-family: var(--font-impact);
-            line-height: 1.45;
-            /* Raw CSS Texture Simulation */
-            background-image: repeating-linear-gradient(
-                0deg,
-                #0a0a0a,
-                #0a0a0a 2px,
-                #000000 3px
-            );
-        }
+ body {
+ background-color: var(--color-primary);
+ color: var(--color-secondary);
+ font-family: var(--font-impact);
+ line-height: 1.45;
+ /* Raw CSS Texture Simulation */
+ background-image: repeating-linear-gradient(
+ 0deg,
+ #0a0a0a,
+ #0a0a0a 2px,
+ #000000 3px
+ );
+ }
 
-        /* Typography & Layout Rules */
-        h1 {
-            font-size: 4.5rem; /* Oversized typography */
-            line-height: 1.1;
-            text-transform: uppercase;
-            letter-spacing: -0.1em;
-            margin-bottom: 30px;
-            color: var(--color-accent);
-            /* Skewed element effect on main title */
-            transform: skewX(-5deg);
-        }
+ /* Typography & Layout Rules */
+ h1 {
+ font-size: 4.5rem; /* Oversized typography */
+ line-height: 1.1;
+ text-transform: uppercase;
+ letter-spacing: -0.1em;
+ margin-bottom: 30px;
+ color: var(--color-accent);
+ /* Skewed element effect on main title */
+ transform: skewX(-5deg);
+ }
 
-        h2 {
-            font-size: 2.4rem;
-            border-bottom: var(--border-thickness) solid var(--color-accent);
-            padding-bottom: 8px;
-            margin-top: 60px; /* More space */
-            transform: rotate(1deg); /* Slight rotation for visual dissonance */
-        }
+ h2 {
+ font-size: 2.4rem;
+ border-bottom: var(--border-thickness) solid var(--color-accent);
+ padding-bottom: 8px;
+ margin-top: 60px; /* More space */
+ transform: rotate(1deg); /* Slight rotation for visual dissonance */
+ }
 
-        h3 {
-            font-size: 1.5rem;
-            color: var(--color-secondary);
-            margin-bottom: 12px;
-            border-left: 6px solid var(--color-accent);
-            padding-left: 10px;
-        }
+ h3 {
+ font-size: 1.5rem;
+ color: var(--color-secondary);
+ margin-bottom: 12px;
+ border-left: 6px solid var(--color-accent);
+ padding-left: 10px;
+ }
 
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 24px; /* Dense spacing */
-        }
+ p {
+ font-size: 1.1rem;
+ margin-bottom: 24px; /* Dense spacing */
+ }
 
-        section {
-            padding: 80px 5%; /* Large padding, full bleed feel */
-            gap: 30px; /* Section gap defined in SPACE rule */
-            max-width: none; /* Full bleed enforced by default */
-        }
+ section {
+ padding: 80px 5%; /* Large padding, full bleed feel */
+ gap: 30px; /* Section gap defined in SPACE rule */
+ max-width: none; /* Full bleed enforced by default */
+ }
 
-        /* Header & Navigation */
-        header {
-            border-bottom: var(--border-thickness) solid var(--color-accent);
-            padding: 24px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.95); /* Subtle black overlay */
-        }
+ /* Header & Navigation */
+ header {
+ border-bottom: var(--border-thickness) solid var(--color-accent);
+ padding: 24px 5%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: rgba(0, 0, 0, 0.95); /* Subtle black overlay */
+ }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: var(--color-accent);
-            text-transform: uppercase;
-            letter-spacing: -0.05em;
-        }
+ .logo {
+ font-size: 1.8rem;
+ font-weight: 900;
+ color: var(--color-accent);
+ text-transform: uppercase;
+ letter-spacing: -0.05em;
+ }
 
-        nav a {
-            color: var(--color-secondary);
-            text-decoration: none;
-            font-weight: bold;
-            margin-left: 24px; /* Space defined in SPACE rule */
-            transition: color 0.1s, transform 0.1s;
-            position: relative;
-        }
+ nav a {
+ color: var(--color-secondary);
+ text-decoration: none;
+ font-weight: bold;
+ margin-left: 24px; /* Space defined in SPACE rule */
+ transition: color 0.1s, transform 0.1s;
+ position: relative;
+ }
 
-        nav a::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 3px; /* Border thickness match */
-            background-color: var(--color-accent);
-            bottom: -2px;
-            left: 0;
-            transition: width 0.3s ease-in-out;
-        }
+ nav a::after {
+ content: '';
+ display: block;
+ width: 0;
+ height: 3px; /* Border thickness match */
+ background-color: var(--color-accent);
+ bottom: -2px;
+ left: 0;
+ transition: width 0.3s ease-in-out;
+ }
 
-        nav a:hover {
-            color: var(--color-accent);
-            transform: translateY(-2px) scale(1.05);
-        }
+ nav a:hover {
+ color: var(--color-accent);
+ transform: translateY(-2px) scale(1.05);
+ }
 
-        /* Main Content Structure */
-        main {
-            min-height: 70vh; /* Ensure good vertical presence */
-        }
+ /* Main Content Structure */
+ main {
+ min-height: 70vh; /* Ensure good vertical presence */
+ }
 
-        /* Hero Section Styling (Asymmetric Block) */
-        #hero {
-            padding: 120px 5%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 30px; /* Space between title and tagline/CTA */
-            border-left: var(--border-thickness) solid var(--color-accent);
-            padding-left: 60px; /* Extra offset for asymmetry */
-        }
+ /* Hero Section Styling (Asymmetric Block) */
+ #hero {
+ padding: 120px 5%;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 30px; /* Space between title and tagline/CTA */
+ border-left: var(--border-thickness) solid var(--color-accent);
+ padding-left: 60px; /* Extra offset for asymmetry */
+ }
 
-        #hero h1 {
-            margin-bottom: 15px; /* Tighter spacing above the core message */
-            transform: skewX(-7deg); /* Slightly more aggressive skew */
-        }
+ #hero h1 {
+ margin-bottom: 15px; /* Tighter spacing above the core message */
+ transform: skewX(-7deg); /* Slightly more aggressive skew */
+ }
 
-        .hero-tagline {
-            font-size: 1.8rem;
-            color: var(--color-accent);
-            text-shadow: 0 0 10px rgba(255, 59, 0, 0.7);
-            border-top: 3px dashed var(--color-secondary); /* Raw texture element */
-            padding-top: 16px;
-        }
+ .hero-tagline {
+ font-size: 1.8rem;
+ color: var(--color-accent);
+ text-shadow: 0 0 10px rgba(255, 59, 0, 0.7);
+ border-top: 3px dashed var(--color-secondary); /* Raw texture element */
+ padding-top: 16px;
+ }
 
-        /* Call to Action Button (Raw feel) */
-        .cta-button {
-            display: inline-block;
-            padding: 18px 40px;
-            background-color: var(--color-accent);
-            color: var(--color-primary);
-            text-decoration: none;
-            font-weight: 900;
-            border: var(--border-thickness) solid var(--color-accent);
-            text-transform: uppercase;
-            transition: all 0.2s ease;
-            box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8); /* Heavy shadow */
-        }
+ /* Call to Action Button (Raw feel) */
+ .cta-button {
+ display: inline-block;
+ padding: 18px 40px;
+ background-color: var(--color-accent);
+ color: var(--color-primary);
+ text-decoration: none;
+ font-weight: 900;
+ border: var(--border-thickness) solid var(--color-accent);
+ text-transform: uppercase;
+ transition: all 0.2s ease;
+ box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8); /* Heavy shadow */
+ }
 
-        .cta-button:hover {
-            background-color: var(--color-secondary);
-            color: var(--color-accent);
-            transform: translate(-2px, -2px);
-            box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.9);
-        }
+ .cta-button:hover {
+ background-color: var(--color-secondary);
+ color: var(--color-accent);
+ transform: translate(-2px, -2px);
+ box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.9);
+ }
 
-        /* UGC Review Cards (Overlapping/Asymmetric Look) */
-        #reviews .review-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px; /* Space between cards */
-            padding-top: 24px;
-        }
+ /* UGC Review Cards (Overlapping/Asymmetric Look) */
+ #reviews .review-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 30px; /* Space between cards */
+ padding-top: 24px;
+ }
 
-        .review-card {
-            border: var(--border-thickness) solid var(--color-primary);
-            background-color: #1a1a1a; /* Slightly lighter black for contrast */
-            padding: 30px;
-            position: relative;
-            overflow: hidden;
-            /* Slight rotation/skewing applied to cards */
-            transform: skewY(1.5deg) translateX(-2px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+ .review-card {
+ border: var(--border-thickness) solid var(--color-primary);
+ background-color: #1a1a1a; /* Slightly lighter black for contrast */
+ padding: 30px;
+ position: relative;
+ overflow: hidden;
+ /* Slight rotation/skewing applied to cards */
+ transform: skewY(1.5deg) translateX(-2px);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
 
-        .review-card:hover {
-            transform: skewY(0.5deg) translateX(-4px);
-            box-shadow: 0 10px 20px rgba(255, 59, 0, 0.3);
-        }
+ .review-card:hover {
+ transform: skewY(0.5deg) translateX(-4px);
+ box-shadow: 0 10px 20px rgba(255, 59, 0, 0.3);
+ }
 
-        /* Star Rating Simulation (CSS only) */
-        .stars {
-            color: var(--color-accent);
-            font-size: 1.4rem;
-            margin-bottom: 12px;
-        }
-        .star::before {
-            content: '★'; /* Use the character for consistency */
-        }
+ /* Star Rating Simulation (CSS only) */
+ .stars {
+ color: var(--color-accent);
+ font-size: 1.4rem;
+ margin-bottom: 12px;
+ }
+ .star::before {
+ content: '★'; /* Use the character for consistency */
+ }
 
-        /* Card Overlap Effect (Subtle placement variation) */
-        .review-card:nth-child(even) {
-            z-index: 2;
-            transform: skewY(0.5deg) translateX(-3px); /* Slightly more aggressive skew/shift */
-        }
+ /* Card Overlap Effect (Subtle placement variation) */
+ .review-card:nth-child(even) {
+ z-index: 2;
+ transform: skewY(0.5deg) translateX(-3px); /* Slightly more aggressive skew/shift */
+ }
 
-        /* Footer Styling */
-        footer {
-            border-top: var(--border-thickness) solid #333;
-            padding: 24px 5%;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #aaaaaa;
-            background-color: #111111;
-        }
+ /* Footer Styling */
+ footer {
+ border-top: var(--border-thickness) solid #333;
+ padding: 24px 5%;
+ text-align: center;
+ font-size: 0.9rem;
+ color: #aaaaaa;
+ background-color: #111111;
+ }
 
-        /* --- Responsive Design (Mobile Adaptation) --- */
-        @media (max-width: 1024px) {
-            h1 {
-                font-size: 3.5rem; /* Slightly smaller H1 */
-                transform: skewX(-6deg);
-            }
+ /* --- Responsive Design (Mobile Adaptation) --- */
+ @media (max-width: 1024px) {
+ h1 {
+ font-size: 3.5rem; /* Slightly smaller H1 */
+ transform: skewX(-6deg);
+ }
 
-            #hero {
-                padding-left: 40px;
-            }
+ #hero {
+ padding-left: 40px;
+ }
 
-            .hero-tagline {
-                font-size: 1.5rem;
-            }
-        }
+ .hero-tagline {
+ font-size: 1.5rem;
+ }
+ }
 
-        @media (max-width: 768px) {
-            /* Mobile Layout adjustments */
-            header {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px 20px;
-            }
+ @media (max-width: 768px) {
+ /* Mobile Layout adjustments */
+ header {
+ flex-direction: column;
+ text-align: center;
+ padding: 20px 20px;
+ }
 
-            .logo {
-                margin-bottom: 15px;
-                font-size: 2rem;
-            }
+ .logo {
+ margin-bottom: 15px;
+ font-size: 2rem;
+ }
 
-            nav {
-                display: flex;
-                justify-content: center;
-                gap: 20px; /* Space between nav links */
-                flex-wrap: wrap;
-                margin-top: 15px;
-            }
-            
-            /* Mobile Menu Toggle (Hamburger) */
-            .nav-toggle {
-                display: block; /* Show toggle button by default on mobile */
-                font-size: 32px;
-                cursor: pointer;
-                color: var(--color-accent);
-                margin-bottom: 10px;
-            }
+ nav {
+ display: flex;
+ justify-content: center;
+ gap: 20px; /* Space between nav links */
+ flex-wrap: wrap;
+ margin-top: 15px;
+ }
+ 
+ /* Mobile Menu Toggle (Hamburger) */
+ .nav-toggle {
+ display: block; /* Show toggle button by default on mobile */
+ font-size: 32px;
+ cursor: pointer;
+ color: var(--color-accent);
+ margin-bottom: 10px;
+ }
 
-            nav a.hidden-mobile {
-                display: none; /* Hide links when hamburger is present (though we keep them for simplicity here) */
-            }
-        }
+ nav a.hidden-mobile {
+ display: none; /* Hide links when hamburger is present (though we keep them for simplicity here) */
+ }
+ }
 
-        /* Mobile Specific Adjustments for Nav */
-        @media (max-width: 768px) {
-            /* Ensure the nav structure adapts properly */
-            nav a {
-                margin: 5px; /* Tighten spacing on mobile */
-            }
-        }
+ /* Mobile Specific Adjustments for Nav */
+ @media (max-width: 768px) {
+ /* Ensure the nav structure adapts properly */
+ nav a {
+ margin: 5px; /* Tighten spacing on mobile */
+ }
+ }
 
-    </style>
+ </style>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="canonical" href="https://kagoshima-travel-guide.pbn-builder.xyz/">
+ <link rel="canonical" href="https://kagoshima-travel-guide.pbn-builder.xyz/">
 </head>
 <body>
 
-    <header>
-        <div class="logo">KAGOSHIMA // FACT</div>
-        <nav id="main-nav">
-            <!-- Hamburger icon placeholder (used via CSS/JS logic, but visible here) -->
-            <a href="#" class="nav-toggle" aria-label="Menu Toggle">&#9776;</a> 
-            <a href="#about">핵심 분석</a>
-            <a href="#route">최적 루트</a>
-            <a href="#reviews">실증 리뷰</a>
-            <!-- 전화번호가 없으므로, 메인 키워드로 대체 -->
-            <a href="tel:0123456789" class="hidden-mobile" aria-label="전화 문의 (Placeholder)"> 연락</a> 
-        </nav>
-    </header>
+ <header>
+ <div class="logo">KAGOSHIMA // FACT</div>
+ <nav id="main-nav">
+ <!-- Hamburger icon placeholder (used via CSS/JS logic, but visible here) -->
+ <a href="#" class="nav-toggle" aria-label="Menu Toggle">&#9776;</a> 
+ <a href="#about">핵심 분석</a>
+ <a href="#route">최적 루트</a>
+ <a href="#reviews">실증 리뷰</a>
+ <!-- 전화번호가 없으므로, 메인 키워드로 대체 -->
+ <a href="tel:0123456789" class="hidden-mobile" aria-label="전화 문의 (Placeholder)"> 연락</a> 
+ </nav>
+ </header>
 
 <main>
-  <section>
-    <h1>Kagoshima Travel: 진실만 남긴다. 이 도시의 핵심을 꿰뚫어라.</h1>
-    <p class="hero-tagline">Kagoshima travel 안내 — 화산과 온천, 그리고 흑돼지가 만드는 규슈 남단의 풍경.</p>
-    <p>가고시마는 활화산을 도심 바로 앞에 두고 살아가는 드문 도시다. 관광 문구를 나열하기보다 방문 계획에 실제로 필요한 지역 특징을 짚는다.</p>
-  </section>
+ <section>
+ <h1>Kagoshima Travel: 진실만 남긴다. 이 도시의 핵심을 꿰뚫어라.</h1>
+ <p class="hero-tagline">Kagoshima travel 안내 — 화산과 온천, 그리고 흑돼지가 만드는 규슈 남단의 풍경.</p>
+ <p>가고시마는 활화산을 도심 바로 앞에 두고 살아가는 드문 도시다. 관광 문구를 나열하기보다 방문 계획에 실제로 필요한 지역 특징을 짚는다.</p>
+ </section>
 
-  <section>
-    <h2>가고시마를 이해하는 다섯 가지 키워드</h2>
-    <ul>
-      <li>사쿠라지마 — 지금도 활동 중인 화산으로, 가고시마 만 건너편에서 도심을 마주 보고 있다. 날씨에 따라 분화구에서 나오는 연기가 시내에서도 보인다.</li>
-      <li>이부스키 모래찜질 온천 — 해변 모래에 몸을 묻고 지열로 데우는 방식의 온천으로 인근 이부스키 지역의 명물이며, 가고시마 시내에서 열차로 이동할 수 있는 거리에 있다.</li>
-      <li>흑돼지 요리 — 가고시마 지역에서 사육되는 흑돼지를 활용한 요리가 지역 식문화의 중심을 이루며, 샤부샤부부터 돈카츠까지 다양한 방식으로 조리된다.</li>
-      <li>고구마소주 — 규슈 남부는 쌀보다 고구마를 원료로 한 소주 생산지로 잘 알려져 있고, 지역마다 증류 방식과 향이 조금씩 다르다.</li>
-      <li>지란 사무라이 마을 — 옛 무사 저택과 정원이 남아 있는 지역으로 시내에서 차로 이동하는 근교 코스로 꼽힌다.</li>
-    </ul>
-    <p class="hidden-mobile">규슈 남부는 온천 밀도가 높은 지역으로 꼽히며, 시내에서 벗어난 소규모 마을에도 공동 온천이 자리한 경우가 많다.</p>
-  </section>
+ <section>
+ <h2>가고시마를 이해하는 다섯 가지 키워드</h2>
+ <ul>
+ <li>사쿠라지마 — 지금도 활동 중인 화산으로, 가고시마 만 건너편에서 도심을 마주 보고 있다. 날씨에 따라 분화구에서 나오는 연기가 시내에서도 보인다.</li>
+ <li>이부스키 모래찜질 온천 — 해변 모래에 몸을 묻고 지열로 데우는 방식의 온천으로 인근 이부스키 지역의 명물이며, 가고시마 시내에서 열차로 이동할 수 있는 거리에 있다.</li>
+ <li>흑돼지 요리 — 가고시마 지역에서 사육되는 흑돼지를 활용한 요리가 지역 식문화의 중심을 이루며, 샤부샤부부터 돈카츠까지 다양한 방식으로 조리된다.</li>
+ <li>고구마소주 — 규슈 남부는 쌀보다 고구마를 원료로 한 소주 생산지로 잘 알려져 있고, 지역마다 증류 방식과 향이 조금씩 다르다.</li>
+ <li>지란 사무라이 마을 — 옛 무사 저택과 정원이 남아 있는 지역으로 시내에서 차로 이동하는 근교 코스로 꼽힌다.</li>
+ </ul>
+ <p class="hidden-mobile">규슈 남부는 온천 밀도가 높은 지역으로 꼽히며, 시내에서 벗어난 소규모 마을에도 공동 온천이 자리한 경우가 많다.</p>
+ </section>
 
-  <section>
-    <h2>일정을 짤 때 참고할 동선</h2>
-    <p>가고시마 시내와 사쿠라지마는 페리로 15분 남짓이면 오갈 수 있어 반나절 코스로 묶기 좋다. 이부스키는 시내에서 열차로 이동하는 근교 지역이라 온천을 포함한 일정이라면 하루를 통째로 배정하는 편이 여유롭다. 지란은 대중교통보다 차량 이동이 편리한 지역이라 렌터카나 관광버스 일정을 확인해두면 도움이 된다. 가고시마추오역은 규슈신칸센이 정차하는 관문 역할을 하므로 후쿠오카 등 다른 규슈 지역과 묶어 일정을 짜기에도 편리하다.</p>
-  </section>
+ <section>
+ <h2>일정을 짤 때 참고할 동선</h2>
+ <p>가고시마 시내와 사쿠라지마는 페리로 15분 남짓이면 오갈 수 있어 반나절 코스로 묶기 좋다. 이부스키는 시내에서 열차로 이동하는 근교 지역이라 온천을 포함한 일정이라면 하루를 통째로 배정하는 편이 여유롭다. 지란은 대중교통보다 차량 이동이 편리한 지역이라 렌터카나 관광버스 일정을 확인해두면 도움이 된다. 가고시마추오역은 규슈신칸센이 정차하는 관문 역할을 하므로 후쿠오카 등 다른 규슈 지역과 묶어 일정을 짜기에도 편리하다.</p>
+ </section>
 
-  <section>
-    <h2>방문 전 체크리스트</h2>
-    <div class="review-grid">
-      <div class="review-card"><p>사쿠라지마 페리는 계절과 시간대에 따라 운항 간격이 달라지므로 시간표를 미리 확인한다.</p></div>
-      <div class="review-card"><p>화산 활동으로 화산재가 날릴 수 있어 현지 안내 방송이나 표지판을 참고하는 것이 좋다.</p></div>
-      <div class="review-card"><p>온천 시설마다 수건 대여 여부와 문신 관련 이용 규정이 다르므로 방문 전 확인이 필요하다.</p></div>
-      <div class="review-card"><p>근교 이동이 많은 지역이라 렌터카를 이용할 경우 국제운전면허증 요건을 미리 확인해둔다.</p></div>
-      <div class="review-card"><p>고구마소주는 도수가 다양하므로 처음 접한다면 낮은 도수부터 시도하는 편이 무난하다.</p></div>
-      <div class="review-card"><p>흑돼지 전문점은 저녁 시간대에 대기줄이 생기는 경우가 있어 이른 시간 방문을 고려할 만하다.</p></div>
-    </div>
-  </section>
+ <section>
+ <h2>방문 전 체크리스트</h2>
+ <div class="review-grid">
+ <div class="review-card"><p>사쿠라지마 페리는 계절과 시간대에 따라 운항 간격이 달라지므로 시간표를 미리 확인한다.</p></div>
+ <div class="review-card"><p>화산 활동으로 화산재가 날릴 수 있어 현지 안내 방송이나 표지판을 참고하는 것이 좋다.</p></div>
+ <div class="review-card"><p>온천 시설마다 수건 대여 여부와 문신 관련 이용 규정이 다르므로 방문 전 확인이 필요하다.</p></div>
+ <div class="review-card"><p>근교 이동이 많은 지역이라 렌터카를 이용할 경우 국제운전면허증 요건을 미리 확인해둔다.</p></div>
+ <div class="review-card"><p>고구마소주는 도수가 다양하므로 처음 접한다면 낮은 도수부터 시도하는 편이 무난하다.</p></div>
+ <div class="review-card"><p>흑돼지 전문점은 저녁 시간대에 대기줄이 생기는 경우가 있어 이른 시간 방문을 고려할 만하다.</p></div>
+ </div>
+ </section>
 
-  <p><a class="cta-button" href="tel:0123456789">0123456789</a></p>
+ <p><a class="cta-button" href="tel:0123456789">0123456789</a></p>
 </main>
 
 
