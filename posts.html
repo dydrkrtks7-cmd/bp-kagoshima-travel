@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · kagoshima-travel</title>
+  <meta name="description" content="kagoshima-travel에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://kagoshima-travel-guide.pbn-builder.xyz/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* --- Design DNA: Street Brutalist & Neon Void Theme --- */
+ :root {
+ --color-primary: #000000;
+ --color-secondary: #ffffff;
+ --color-accent: #ff3b00;
+ --font-impact: 'Impact', 'system-ui', sans-serif;
+ --border-thickness: 4px;
+ }
+
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ background-color: var(--color-primary);
+ color: var(--color-secondary);
+ font-family: var(--font-impact);
+ line-height: 1.45;
+ /* Raw CSS Texture Simulation */
+ background-image: repeating-linear-gradient(
+ 0deg,
+ #0a0a0a,
+ #0a0a0a 2px,
+ #000000 3px
+ );
+ }
+
+ /* Typography & Layout Rules */
+ h1 {
+ font-size: 4.5rem; /* Oversized typography */
+ line-height: 1.1;
+ text-transform: uppercase;
+ letter-spacing: -0.1em;
+ margin-bottom: 30px;
+ color: var(--color-accent);
+ /* Skewed element effect on main title */
+ transform: skewX(-5deg);
+ }
+
+ h2 {
+ font-size: 2.4rem;
+ border-bottom: var(--border-thickness) solid var(--color-accent);
+ padding-bottom: 8px;
+ margin-top: 60px; /* More space */
+ transform: rotate(1deg); /* Slight rotation for visual dissonance */
+ }
+
+ h3 {
+ font-size: 1.5rem;
+ color: var(--color-secondary);
+ margin-bottom: 12px;
+ border-left: 6px solid var(--color-accent);
+ padding-left: 10px;
+ }
+
+ p {
+ font-size: 1.1rem;
+ margin-bottom: 24px; /* Dense spacing */
+ }
+
+ section {
+ padding: 80px 5%; /* Large padding, full bleed feel */
+ gap: 30px; /* Section gap defined in SPACE rule */
+ max-width: none; /* Full bleed enforced by default */
+ }
+
+ /* Header & Navigation */
+ header {
+ border-bottom: var(--border-thickness) solid var(--color-accent);
+ padding: 24px 5%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: rgba(0, 0, 0, 0.95); /* Subtle black overlay */
+ }
+
+ .logo {
+ font-size: 1.8rem;
+ font-weight: 900;
+ color: var(--color-accent);
+ text-transform: uppercase;
+ letter-spacing: -0.05em;
+ }
+
+ nav a {
+ color: var(--color-secondary);
+ text-decoration: none;
+ font-weight: bold;
+ margin-left: 24px; /* Space defined in SPACE rule */
+ transition: color 0.1s, transform 0.1s;
+ position: relative;
+ }
+
+ nav a::after {
+ content: '';
+ display: block;
+ width: 0;
+ height: 3px; /* Border thickness match */
+ background-color: var(--color-accent);
+ bottom: -2px;
+ left: 0;
+ transition: width 0.3s ease-in-out;
+ }
+
+ nav a:hover {
+ color: var(--color-accent);
+ transform: translateY(-2px) scale(1.05);
+ }
+
+ /* Main Content Structure */
+ main {
+ min-height: 70vh; /* Ensure good vertical presence */
+ }
+
+ /* Hero Section Styling (Asymmetric Block) */
+ #hero {
+ padding: 120px 5%;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 30px; /* Space between title and tagline/CTA */
+ border-left: var(--border-thickness) solid var(--color-accent);
+ padding-left: 60px; /* Extra offset for asymmetry */
+ }
+
+ #hero h1 {
+ margin-bottom: 15px; /* Tighter spacing above the core message */
+ transform: skewX(-7deg); /* Slightly more aggressive skew */
+ }
+
+ .hero-tagline {
+ font-size: 1.8rem;
+ color: var(--color-accent);
+ text-shadow: 0 0 10px rgba(255, 59, 0, 0.7);
+ border-top: 3px dashed var(--color-secondary); /* Raw texture element */
+ padding-top: 16px;
+ }
+
+ /* Call to Action Button (Raw feel) */
+ .cta-button {
+ display: inline-block;
+ padding: 18px 40px;
+ background-color: var(--color-accent);
+ color: var(--color-primary);
+ text-decoration: none;
+ font-weight: 900;
+ border: var(--border-thickness) solid var(--color-accent);
+ text-transform: uppercase;
+ transition: all 0.2s ease;
+ box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8); /* Heavy shadow */
+ }
+
+ .cta-button:hover {
+ background-color: var(--color-secondary);
+ color: var(--color-accent);
+ transform: translate(-2px, -2px);
+ box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.9);
+ }
+
+ /* UGC Review Cards (Overlapping/Asymmetric Look) */
+ #reviews .review-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 30px; /* Space between cards */
+ padding-top: 24px;
+ }
+
+ .review-card {
+ border: var(--border-thickness) solid var(--color-primary);
+ background-color: #1a1a1a; /* Slightly lighter black for contrast */
+ padding: 30px;
+ position: relative;
+ overflow: hidden;
+ /* Slight rotation/skewing applied to cards */
+ transform: skewY(1.5deg) translateX(-2px);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .review-card:hover {
+ transform: skewY(0.5deg) translateX(-4px);
+ box-shadow: 0 10px 20px rgba(255, 59, 0, 0.3);
+ }
+
+ /* Star Rating Simulation (CSS only) */
+ .stars {
+ color: var(--color-accent);
+ font-size: 1.4rem;
+ margin-bottom: 12px;
+ }
+ .star::before {
+ content: '★'; /* Use the character for consistency */
+ }
+
+ /* Card Overlap Effect (Subtle placement variation) */
+ .review-card:nth-child(even) {
+ z-index: 2;
+ transform: skewY(0.5deg) translateX(-3px); /* Slightly more aggressive skew/shift */
+ }
+
+ /* Footer Styling */
+ footer {
+ border-top: var(--border-thickness) solid #333;
+ padding: 24px 5%;
+ text-align: center;
+ font-size: 0.9rem;
+ color: #aaaaaa;
+ background-color: #111111;
+ }
+
+ /* --- Responsive Design (Mobile Adaptation) --- */
+ @media (max-width: 1024px) {
+ h1 {
+ font-size: 3.5rem; /* Slightly smaller H1 */
+ transform: skewX(-6deg);
+ }
+
+ #hero {
+ padding-left: 40px;
+ }
+
+ .hero-tagline {
+ font-size: 1.5rem;
+ }
+ }
+
+ @media (max-width: 768px) {
+ /* Mobile Layout adjustments */
+ header {
+ flex-direction: column;
+ text-align: center;
+ padding: 20px 20px;
+ }
+
+ .logo {
+ margin-bottom: 15px;
+ font-size: 2rem;
+ }
+
+ nav {
+ display: flex;
+ justify-content: center;
+ gap: 20px; /* Space between nav links */
+ flex-wrap: wrap;
+ margin-top: 15px;
+ }
+ 
+ /* Mobile Menu Toggle (Hamburger) */
+ .nav-toggle {
+ display: block; /* Show toggle button by default on mobile */
+ font-size: 32px;
+ cursor: pointer;
+ color: var(--color-accent);
+ margin-bottom: 10px;
+ }
+
+ nav a.hidden-mobile {
+ display: none; /* Hide links when hamburger is present (though we keep them for simplicity here) */
+ }
+ }
+
+ /* Mobile Specific Adjustments for Nav */
+ @media (max-width: 768px) {
+ /* Ensure the nav structure adapts properly */
+ nav a {
+ margin: 5px; /* Tighten spacing on mobile */
+ }
+ }
+
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · kagoshima-travel">
+  <meta property="og:description" content="kagoshima-travel에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://kagoshima-travel-guide.pbn-builder.xyz/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="logo">KAGOSHIMA // FACT</div>
+ <nav id="main-nav">
+ <!-- Hamburger icon placeholder (used via CSS/JS logic, but visible here) -->
+ <a href="#" class="nav-toggle" aria-label="Menu Toggle">&#9776;</a> 
+ <a href="#about">핵심 분석</a>
+ <a href="#route">최적 루트</a>
+ <a href="#reviews">실증 리뷰</a>
+ <!-- 전화번호가 없으므로, 메인 키워드로 대체 -->
+ <a href="tel:0123456789" class="hidden-mobile" aria-label="전화 문의 (Placeholder)"> 연락</a> 
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 35개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-213.html">가구마 해안절벽: 제라함파 화산 화구 관광 조직의 결정판</a>
+        <p class="post-item__summary">이 malade사도라 해요. Kagoshima 현대적인 관광 최종지점입니다. 육지의 긁어내기 연습을 다 유명한 포스를 숨기면서 길이 잘 정리되어 있습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0422.html">Kagoshima travel 안내 및 마포/합정 인디 소셜 라운지 가이드 비교 분석</a>
+        <p class="post-item__summary">해외 여행지인 Kagoshima travel 안내 정보를 찾다 보면 일상적인 여가 공간에 대한 관심도 높아지기 마련입니다. 특히 도심 속에서 소규모 모임을 즐기고자 하는 수요가 늘어나면서 프라이빗한</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0423.html">Kagoshima travel 안내 및 동대문 마사지 풋쌤 이용 방법</a>
+        <p class="post-item__summary">여행 준비 시 흔히 범하는 실수는 일정을 너무 타이트하게 짜서 현지에서 휴식할 시간을 전혀 고려하지 않는 점입니다. 이는 단순히 해외여행뿐만 아니라 일상의 피로를 푸는 마사지 예약 과정에서도 동일하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0424.html">Kagoshima travel 안내를 위한 마르지 않는 1급수 백링크 주스 공급 서비스 활용법</a>
+        <p class="post-item__summary">디지털 세상에서 여행 정보를 널리 알리기 위해서는 체계적인 최적화가 수반되어야 합니다. Kagoshima travel 안내 콘텐츠가 더 많은 이들에게 닿을 수 있도록 하는 전략적 접근은 필수적입니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0425.html">Kagoshima travel 안내와 도메인 지수 탈모 방지 및 앵커 텍스트 이식 가이드</a>
+        <p class="post-item__summary">갑작스러운 검색 노출 급락을 경험하면 마치 낯선 곳에서 길을 잃은 여행객처럼 당황하기 마련입니다. Kagoshima travel 안내 정보를 찾던 방문객들조차 자신의 사이트 지수가 하락했을 때 겪는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0426.html">Kagoshima travel 안내로 본 마포 럭셔리 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">흔히 고급스러운 모임 공간을 예약할 때 무조건 가격이 높은 곳이 좋다고 오해하는 경우가 많습니다. Kagoshima travel 안내 정보를 확인하며 여행을 계획하듯, 모임 장소 역시 목적과 인원 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0427.html">Kagoshima travel 안내와 구글 알고리즘 감점 치료 및 백링크 수술실</a>
+        <p class="post-item__summary">정상적인 웹 환경을 유지하기 위해서는 검색 엔진이 요구하는 콘텐츠 품질, 적절한 키워드 배치, 그리고 자연스러운 외부 링크 구성을 모두 충족해야 합니다. Kagoshima travel 안내 관련 정</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0428.html">Kagoshima travel 안내 속 마포 코인노래방 방음 시설 비교 가이드</a>
+        <p class="post-item__summary">여러분은 여가 시간을 보낼 때 소음 차단이 얼마나 완벽하게 이루어지는지 중요하게 생각하시나요? Kagoshima travel 안내 정보를 검색하며 조용한 휴식을 꿈꾸는 것처럼, 도심 속 코인노래방을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0429.html">Kagoshima travel 안내 가이드가 말하는 현명한 셔츠룸 예약 절차와 후기 판별법</a>
+        <p class="post-item__summary">Kagoshima travel 안내 정보를 접하다 보면 낯선 환경에서의 서비스 이용에 대해 고민하게 됩니다. 특히 국내외를 막론하고 유흥 문화를 즐기려는 이들이 늘어나면서, 체계적인 시스템을 갖춘 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0430.html">Kagoshima travel 안내로 배우는 마포 셔츠룸 예약 시 눈탱이 피하는 법의 핵심</a>
+        <p class="post-item__summary">많은 이들이 Kagoshima travel 안내를 통해 정보를 얻는 것처럼, 국내 유흥 서비스 이용 시에도 표준화된 정보를 찾는 것이 중요합니다. 특히 마포 일대에서 시간을 보내기로 결정했다면 가격</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0431.html">Kagoshima travel 안내가 말하는 마포 단체 회식용 대형 룸 노래방 가격 정보 성공 전략</a>
+        <p class="post-item__summary">Kagoshima travel 안내를 접하는 여행자들처럼, 마포에서 단체 모임을 기획하는 분들도 철저한 준비가 필요합니다. 대규모 인원이 함께하는 자리는 예약 지점에서의 사소한 실수로 전체 분위기가</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0432.html">Kagoshima travel 안내 방식 도입한 마포 유흥 투명 정찰제 가격 정보 디렉토리 활용법</a>
+        <p class="post-item__summary">Kagoshima travel 안내를 통해 익숙해진 정보 분류 체계는 국내 유흥 정보 검색에도 유용하게 적용될 수 있습니다. 특히 지역별 정보를 정찰제 중심으로 나열하여 사용자의 선택을 돕는 방식은</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0433.html">Kagoshima travel 안내 기반 마포 셔츠룸 리얼 후기 소셜 마케팅 가이드 전략</a>
+        <p class="post-item__summary">낯선 지역을 방문할 때 우리는 흔히 여행 가이드를 찾지만, 도심 속 유흥 문화를 탐색할 때도 유사한 준비가 필요합니다. Kagoshima travel 안내 정보를 확인하듯 마포 지역의 유흥 업소를 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0434.html">Kagoshima travel 안내 속 마포 홍대 단체 가라오케 예약 가이드 실무</a>
+        <p class="post-item__summary">흔히 가라오케는 밤늦게만 이용해야 한다고 생각하지만, 이는 잘못된 편견일 수 있습니다. Kagoshima travel 안내를 확인하는 여행자들이 현지 시간을 효율적으로 배분하듯, 홍대 지역의 가라오</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0435.html">Kagoshima travel 안내로 학습하는 구글 알고리즘 고신용 도메인 보증 카드 발급</a>
+        <p class="post-item__summary">안정적인 온라인 환경을 구축하려면 명확한 운영 정책 준수와 꾸준한 신뢰도가 필수적으로 요구됩니다. Kagoshima travel 안내 웹사이트가 검색 최적화를 유지하는 원리와 고신용 도메인이 구글 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0436.html">Kagoshima travel 안내가 말하는 마포 홍대 로컬 럭셔리 밤문화 가이드의 기준</a>
+        <p class="post-item__summary">여러분은 낯선 도시를 여행할 때 밤의 풍경을 어떻게 즐기고 계신가요? Kagoshima travel 안내를 통해 지역 정보를 얻듯, 우리가 거주하는 마포 홍대의 밤문화 또한 제대로 알고 즐겨야 진정</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0437.html">Kagoshima travel 안내 및 구글 신뢰 지수 모발이식 솔루션 활용법</a>
+        <p class="post-item__summary">규슈 남부의 화산 지대를 탐방하는 Kagoshima travel 안내를 준비하는 과정은 철저한 정보 검증에서 시작됩니다. 현지 여행지의 정보를 수집할 때 공식적인 신뢰도를 갖춘 데이터를 우선적으로 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0444.html">Kagoshima travel 안내</a>
+        <p class="post-item__summary">여러분은 복잡한 반복 업무를 자동화하고 싶다는 생각을 해본 적이 있으신가요? Kagoshima travel 안내와 같은 여행 정보 블로그를 운영하면서 동시에 효율적인 비즈니스 모델을 꿈꾸는 분들에게</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0445.html">Kagoshima travel 안내 기반 구글 틈새 키워드 트래픽 외환 거래 전략 수립법</a>
+        <p class="post-item__summary">Kagoshima travel 안내 정보를 활용하여 방문객 데이터를 분석하고 이를 금융 시장의 변동성에 대입하는 접근 방식이 주목받고 있습니다. 특정 지역 정보를 탐색하는 유저의 심리는 트래픽의 질</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0446.html">Kagoshima travel 안내로 살펴본 합정 셔츠룸 단골들이 뽑은 핫플 매거진 분석</a>
+        <p class="post-item__summary">Kagoshima travel 안내를 통해 얻은 해외 지역 정보가 로컬 문화와 결합하면서 독특한 비즈니스 모델을 창출하고 있습니다. 특히 합정 지역의 상권은 기존의 틀을 벗어난 새로운 콘텐츠를 갈구</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>

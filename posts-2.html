@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · kagoshima-travel</title>
+  <meta name="description" content="kagoshima-travel에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://kagoshima-travel-guide.pbn-builder.xyz/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* --- Design DNA: Street Brutalist & Neon Void Theme --- */
+ :root {
+ --color-primary: #000000;
+ --color-secondary: #ffffff;
+ --color-accent: #ff3b00;
+ --font-impact: 'Impact', 'system-ui', sans-serif;
+ --border-thickness: 4px;
+ }
+
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ background-color: var(--color-primary);
+ color: var(--color-secondary);
+ font-family: var(--font-impact);
+ line-height: 1.45;
+ /* Raw CSS Texture Simulation */
+ background-image: repeating-linear-gradient(
+ 0deg,
+ #0a0a0a,
+ #0a0a0a 2px,
+ #000000 3px
+ );
+ }
+
+ /* Typography & Layout Rules */
+ h1 {
+ font-size: 4.5rem; /* Oversized typography */
+ line-height: 1.1;
+ text-transform: uppercase;
+ letter-spacing: -0.1em;
+ margin-bottom: 30px;
+ color: var(--color-accent);
+ /* Skewed element effect on main title */
+ transform: skewX(-5deg);
+ }
+
+ h2 {
+ font-size: 2.4rem;
+ border-bottom: var(--border-thickness) solid var(--color-accent);
+ padding-bottom: 8px;
+ margin-top: 60px; /* More space */
+ transform: rotate(1deg); /* Slight rotation for visual dissonance */
+ }
+
+ h3 {
+ font-size: 1.5rem;
+ color: var(--color-secondary);
+ margin-bottom: 12px;
+ border-left: 6px solid var(--color-accent);
+ padding-left: 10px;
+ }
+
+ p {
+ font-size: 1.1rem;
+ margin-bottom: 24px; /* Dense spacing */
+ }
+
+ section {
+ padding: 80px 5%; /* Large padding, full bleed feel */
+ gap: 30px; /* Section gap defined in SPACE rule */
+ max-width: none; /* Full bleed enforced by default */
+ }
+
+ /* Header & Navigation */
+ header {
+ border-bottom: var(--border-thickness) solid var(--color-accent);
+ padding: 24px 5%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: rgba(0, 0, 0, 0.95); /* Subtle black overlay */
+ }
+
+ .logo {
+ font-size: 1.8rem;
+ font-weight: 900;
+ color: var(--color-accent);
+ text-transform: uppercase;
+ letter-spacing: -0.05em;
+ }
+
+ nav a {
+ color: var(--color-secondary);
+ text-decoration: none;
+ font-weight: bold;
+ margin-left: 24px; /* Space defined in SPACE rule */
+ transition: color 0.1s, transform 0.1s;
+ position: relative;
+ }
+
+ nav a::after {
+ content: '';
+ display: block;
+ width: 0;
+ height: 3px; /* Border thickness match */
+ background-color: var(--color-accent);
+ bottom: -2px;
+ left: 0;
+ transition: width 0.3s ease-in-out;
+ }
+
+ nav a:hover {
+ color: var(--color-accent);
+ transform: translateY(-2px) scale(1.05);
+ }
+
+ /* Main Content Structure */
+ main {
+ min-height: 70vh; /* Ensure good vertical presence */
+ }
+
+ /* Hero Section Styling (Asymmetric Block) */
+ #hero {
+ padding: 120px 5%;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 30px; /* Space between title and tagline/CTA */
+ border-left: var(--border-thickness) solid var(--color-accent);
+ padding-left: 60px; /* Extra offset for asymmetry */
+ }
+
+ #hero h1 {
+ margin-bottom: 15px; /* Tighter spacing above the core message */
+ transform: skewX(-7deg); /* Slightly more aggressive skew */
+ }
+
+ .hero-tagline {
+ font-size: 1.8rem;
+ color: var(--color-accent);
+ text-shadow: 0 0 10px rgba(255, 59, 0, 0.7);
+ border-top: 3px dashed var(--color-secondary); /* Raw texture element */
+ padding-top: 16px;
+ }
+
+ /* Call to Action Button (Raw feel) */
+ .cta-button {
+ display: inline-block;
+ padding: 18px 40px;
+ background-color: var(--color-accent);
+ color: var(--color-primary);
+ text-decoration: none;
+ font-weight: 900;
+ border: var(--border-thickness) solid var(--color-accent);
+ text-transform: uppercase;
+ transition: all 0.2s ease;
+ box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8); /* Heavy shadow */
+ }
+
+ .cta-button:hover {
+ background-color: var(--color-secondary);
+ color: var(--color-accent);
+ transform: translate(-2px, -2px);
+ box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.9);
+ }
+
+ /* UGC Review Cards (Overlapping/Asymmetric Look) */
+ #reviews .review-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 30px; /* Space between cards */
+ padding-top: 24px;
+ }
+
+ .review-card {
+ border: var(--border-thickness) solid var(--color-primary);
+ background-color: #1a1a1a; /* Slightly lighter black for contrast */
+ padding: 30px;
+ position: relative;
+ overflow: hidden;
+ /* Slight rotation/skewing applied to cards */
+ transform: skewY(1.5deg) translateX(-2px);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .review-card:hover {
+ transform: skewY(0.5deg) translateX(-4px);
+ box-shadow: 0 10px 20px rgba(255, 59, 0, 0.3);
+ }
+
+ /* Star Rating Simulation (CSS only) */
+ .stars {
+ color: var(--color-accent);
+ font-size: 1.4rem;
+ margin-bottom: 12px;
+ }
+ .star::before {
+ content: '★'; /* Use the character for consistency */
+ }
+
+ /* Card Overlap Effect (Subtle placement variation) */
+ .review-card:nth-child(even) {
+ z-index: 2;
+ transform: skewY(0.5deg) translateX(-3px); /* Slightly more aggressive skew/shift */
+ }
+
+ /* Footer Styling */
+ footer {
+ border-top: var(--border-thickness) solid #333;
+ padding: 24px 5%;
+ text-align: center;
+ font-size: 0.9rem;
+ color: #aaaaaa;
+ background-color: #111111;
+ }
+
+ /* --- Responsive Design (Mobile Adaptation) --- */
+ @media (max-width: 1024px) {
+ h1 {
+ font-size: 3.5rem; /* Slightly smaller H1 */
+ transform: skewX(-6deg);
+ }
+
+ #hero {
+ padding-left: 40px;
+ }
+
+ .hero-tagline {
+ font-size: 1.5rem;
+ }
+ }
+
+ @media (max-width: 768px) {
+ /* Mobile Layout adjustments */
+ header {
+ flex-direction: column;
+ text-align: center;
+ padding: 20px 20px;
+ }
+
+ .logo {
+ margin-bottom: 15px;
+ font-size: 2rem;
+ }
+
+ nav {
+ display: flex;
+ justify-content: center;
+ gap: 20px; /* Space between nav links */
+ flex-wrap: wrap;
+ margin-top: 15px;
+ }
+ 
+ /* Mobile Menu Toggle (Hamburger) */
+ .nav-toggle {
+ display: block; /* Show toggle button by default on mobile */
+ font-size: 32px;
+ cursor: pointer;
+ color: var(--color-accent);
+ margin-bottom: 10px;
+ }
+
+ nav a.hidden-mobile {
+ display: none; /* Hide links when hamburger is present (though we keep them for simplicity here) */
+ }
+ }
+
+ /* Mobile Specific Adjustments for Nav */
+ @media (max-width: 768px) {
+ /* Ensure the nav structure adapts properly */
+ nav a {
+ margin: 5px; /* Tighten spacing on mobile */
+ }
+ }
+
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · kagoshima-travel">
+  <meta property="og:description" content="kagoshima-travel에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://kagoshima-travel-guide.pbn-builder.xyz/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="logo">KAGOSHIMA // FACT</div>
+ <nav id="main-nav">
+ <!-- Hamburger icon placeholder (used via CSS/JS logic, but visible here) -->
+ <a href="#" class="nav-toggle" aria-label="Menu Toggle">&#9776;</a> 
+ <a href="#about">핵심 분석</a>
+ <a href="#route">최적 루트</a>
+ <a href="#reviews">실증 리뷰</a>
+ <!-- 전화번호가 없으므로, 메인 키워드로 대체 -->
+ <a href="tel:0123456789" class="hidden-mobile" aria-label="전화 문의 (Placeholder)"> 연락</a> 
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 35개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0447.html">Kagoshima travel 안내와 연동된 전문 셔츠룸 사이트 접속 시 주의사항</a>
+        <p class="post-item__summary">Kagoshima travel 안내를 통해 정보를 찾던 사용자들이 국내 엔터테인먼트 환경으로 관심을 돌릴 때 가장 먼저 맞닥뜨리는 것이 예약 과정의 복잡함입니다. 많은 사람들이 편리함만 기대하고 성</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0221.html">Kagoshima travel 안내로 본 공덕 셔츠룸 추천정보</a>
+        <p class="post-item__summary">공덕 지역에서 새로운 엔터테인먼트 공간을 찾고 계신다면 단계별 절차를 먼저 이해해야 합니다. Kagoshima travel 안내 정보처럼 체계적인 계획을 세우면 만족도가 훨씬 높아집니다. 신뢰할 수</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0222.html">Kagoshima travel 안내 기반 연남 유흥 추천정보 비교 분석</a>
+        <p class="post-item__summary">Kagoshima travel 안내 정보를 접하며 여행을 계획하듯, 연남동에서의 저녁 시간을 보낼 때도 체계적인 사전 조사가 필요합니다. 연남동 지역 내 유흥 시설은 크게 정통 방식의 업소와 모던한</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0223.html">Kagoshima travel 안내를 통해 본 마곡 가라오케 추천정보 예약 요령</a>
+        <p class="post-item__summary">Kagoshima travel 안내를 참고하여 일정을 조율하듯, 마곡 지역의 가라오케를 방문할 때도 철저한 사전 준비가 성패를 가릅니다. 많은 이들이 예약 절차를 간과하여 현장에서 큰 불편을 겪거나</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0224.html">Kagoshima travel 안내 기반 마곡 유흥 추천정보 접근성 체크리스트</a>
+        <p class="post-item__summary">Kagoshima travel 안내를 통해 현지 여행 경로를 짜는 방식처럼, 마곡 지역 유흥 시설을 방문할 때도 효율적인 동선 확보가 최우선입니다. 본인이 머무는 숙소나 이동 수단과 해당 업소 사이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0225.html">Kagoshima travel 안내, 합정에서 노래방 첫 방문 시 알아야 할 추천정보</a>
+        <p class="post-item__summary">합정을 처음 방문한 김대리님, 회식 후 2차로 노래방을 찾으려는데 어디로 가야 할지 막막한 경험 있으신가요? 서울의 번화가 중 한 곳인 합정은 다양한 즐길 거리가 많지만, 그만큼 선택지가 많아 초행</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0226.html">Kagoshima travel 안내로 살펴보는 연남 클럽 추천정보 탐구</a>
+        <p class="post-item__summary">Kagoshima travel 안내 정보를 찾는 분들 중 일부는 국내 밤 문화 역시 해외와 크게 다르지 않다고 오해하곤 합니다. 하지만 지역마다 고유한 분위기와 매너가 존재하며 연남동 일대 역시 예</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0227.html">Kagoshima travel 안내, 합정 셔츠룸 방문 시 인원 구성별 추천정보</a>
+        <p class="post-item__summary">성공적인 합정 셔츠룸 방문을 위해서는 위치, 서비스, 그리고 무엇보다 중요한 인원 구성 조건을 꼼꼼히 따져봐야 합니다. 마치 Kagoshima travel 안내를 통해 여행 계획을 세우듯, 셔츠룸 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0228.html">Kagoshima travel 안내 기반 공덕 가라오케 추천정보 분석</a>
+        <p class="post-item__summary">일상의 스트레스를 해소하기 위해 적절한 장소를 찾고 계신가요. Kagoshima travel 안내 포털에서 다루는 방식처럼 특정 목적에 맞는 최적의 장소를 선별하는 것은 매우 중요한 일입니다. 공덕</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0229.html">Kagoshima travel 안내 확인 상수 마사지 추천정보 비교</a>
+        <p class="post-item__summary">몸의 피로를 풀어주는 것은 일상의 활력을 되찾는 효율적인 방법입니다. Kagoshima travel 안내 문서를 보듯 체계적인 접근을 통해 상수 마사지 추천정보를 검토하는 절차를 따르면 보다 신뢰할</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0230.html">Kagoshima travel 안내 참조 망원 노래방 추천정보 분석</a>
+        <p class="post-item__summary">노래방을 선택할 때 고민되는 지점은 크게 두 가지로 나뉩니다. Kagoshima travel 안내에서 제시하는 여행지 선택론과 비슷하게, 사용자는 가성비 중심의 선택과 프리미엄 시설 중심의 선택 사</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0231.html">Kagoshima travel 안내 및 홍대 노래방 추천정보 예약 완벽 가이드</a>
+        <p class="post-item__summary">해외 관광을 준비하며 Kagoshima travel 안내 정보를 검색하는 것과 서울의 번화가에서 즐거운 시간을 보내는 것은 낯선 환경을 마주한다는 공통점이 있습니다. 많은 이들이 홍대 인근에서 노래</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-1qdg3bv.html">정보 해결 방법 총정리</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/interview-001-1tgtnuc.html">실패 사례를 복기해 재발 방지 원칙을 도출</a>
+        <p class="post-item__summary">MK울트라는 CIA 비밀 프로젝트였다. MK울트라는 과거에 존재했던 CIA 프로그램으로, 정보기관 내부에서 발생하는 불법 활동이나 비판적 의견을 감추기 위해 만들어졌다. MK울트라는 사실 자체가 논</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/t3link-002-1tgtnuc.html">Kagoshima travel 안내</a>
+        <p class="post-item__summary">가고시마는 일본 규슈의 최남단에 위치하여 독특한 자연환경과 온화한 기후를 자랑하는 여행지입니다. 활발하게 활동하는 화산인 사쿠라지마를 중심으로 아름다운 바다와 풍요로운 자연경관이 어우러져 있어 많은</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
